@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bmcp1.finalyearappratethegaff.MainActivity$PlaceholderFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:hint="@string/prompt_address"
+        android:ems="10"
+        android:id="@+id/address"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_postcode"
+        android:id="@+id/postcode"
+        android:layout_below="@+id/address"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_rental_agent"
+        android:id="@+id/rentalAgent"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/postcode"
+        android:layout_alignParentStart="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@android:color/holo_green_dark"
+        android:secondaryProgressTint="@android:color/holo_green_dark"
+        android:id="@+id/ratingBar"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/rentalAgent"
+        android:layout_alignParentEnd="true"
+        android:stepSize="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_rating"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:id="@+id/rating"
+        android:layout_marginBottom="10dp"
+        android:layout_alignBottom="@+id/ratingBar"
+        android:layout_toStartOf="@+id/ratingBar" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_bed_type"
+        android:id="@+id/bedType"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/rating"
+        android:layout_alignParentStart="true" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bedType"
+                android:id="@+id/rg_heating">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/gas_radio_button"
+                android:id="@+id/gasRadioButton"
+                android:layout_alignParentStart="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oil"
+                android:id="@+id/oilRadioButton"
+                android:layout_alignTop="@+id/gasRadioButton"
+                android:layout_toEndOf="@+id/sendButton" />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/send_button"
+        android:background="@drawable/mybutton_two"
+        android:textColor="#fefcfc"
+        android:id="@+id/sendButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="@string/prompt_additional"
+        android:id="@+id/additionalInformation"
+        android:layout_above="@+id/sendButton"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_window_type"
+        android:id="@+id/windowType"
+        android:layout_above="@+id/additionalInformation"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
